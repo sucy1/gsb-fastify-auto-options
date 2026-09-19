@@ -136,6 +136,7 @@ declare namespace fastify {
     disableRequestLogging?: boolean | ((req: FastifyRequest) => boolean),
     logController?: LogControllerClass,
     exposeHeadRoutes?: boolean,
+    exposeOptionsRoutes?: boolean,
     onProtoPoisoning?: ProtoAction,
     onConstructorPoisoning?: ConstructorAction,
     logger?: boolean | FastifyLoggerOptions<RawServer> & PinoLoggerOptions,

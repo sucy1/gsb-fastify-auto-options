@@ -43,6 +43,7 @@ const defaultInitOptions = {
   requestIdLogLabel: 'reqId', // TODO: remove it in v6
   http2SessionTimeout: 72000, // 72 seconds
   exposeHeadRoutes: true,
+  exposeOptionsRoutes: false,
   useSemicolonDelimiter: false,
   allowErrorHandlerOverride: true, // TODO: set to false in v6
   routerOptions: {
@@ -110,6 +111,7 @@ const schema = {
     requestIdLogLabel: { type: 'string', default: defaultInitOptions.requestIdLogLabel },
     http2SessionTimeout: { type: 'integer', default: defaultInitOptions.http2SessionTimeout },
     exposeHeadRoutes: { type: 'boolean', default: defaultInitOptions.exposeHeadRoutes },
+    exposeOptionsRoutes: { type: 'boolean', default: defaultInitOptions.exposeOptionsRoutes },
     useSemicolonDelimiter: { type: 'boolean', default: defaultInitOptions.useSemicolonDelimiter },
     routerOptions: {
       type: 'object',

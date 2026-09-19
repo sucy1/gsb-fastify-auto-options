@@ -322,6 +322,7 @@ type InitialConfig = Readonly<{
   requestIdHeader?: string | false,
   requestIdLogLabel?: string,
   http2SessionTimeout?: number,
+  exposeOptionsRoutes?: boolean,
   useSemicolonDelimiter?: boolean,
   routerOptions?: FastifyRouterOptions<RawServerDefault>
 }>

@@ -711,6 +711,7 @@ export interface FastifyInstance<
     /** @deprecated Use the `logController` option with `requestIdLogLabel` instead. Will be removed in `fastify@6`. */
     requestIdLogLabel?: string,
     http2SessionTimeout?: number,
+    exposeOptionsRoutes?: boolean,
     useSemicolonDelimiter?: boolean,
     routerOptions?: FastifyRouterOptions<RawServer>
   }>

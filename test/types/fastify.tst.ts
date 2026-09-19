@@ -41,6 +41,10 @@ expect(fastify({})).type.toBe<
   FastifyInstance<http.Server, http.IncomingMessage, http.ServerResponse> &
   SafePromiseLike<FastifyInstance<http.Server, http.IncomingMessage, http.ServerResponse>>
 >()
+expect(fastify({ exposeOptionsRoutes: true })).type.toBe<
+  FastifyInstance<http.Server, http.IncomingMessage, http.ServerResponse> &
+  SafePromiseLike<FastifyInstance<http.Server, http.IncomingMessage, http.ServerResponse>>
+>()
 expect(fastify({ http: {} })).type.toBe<
   FastifyInstance<http.Server, http.IncomingMessage, http.ServerResponse> &
   SafePromiseLike<FastifyInstance<http.Server, http.IncomingMessage, http.ServerResponse>>
