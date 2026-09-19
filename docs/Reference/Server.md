@@ -31,6 +31,7 @@ describes the properties available in that options object.
   - [`trustProxy`](#trustproxy)
   - [`pluginTimeout`](#plugintimeout)
   - [`exposeHeadRoutes`](#exposeheadroutes)
+  - [`exposeOptionsRoutes`](#exposeoptionsroutes)
   - [`return503OnClosing`](#return503onclosing)
   - [`ajv`](#ajv)
   - [`serializerOpts`](#serializeropts)
@@ -737,6 +738,21 @@ const fastify = require('fastify')({
 Automatically creates a sibling `HEAD` route for each `GET` route defined. If
 you want a custom `HEAD` handler without disabling this option, make sure to
 define it before the `GET` route.
+
+### `exposeOptionsRoutes`
+<a id="exposeOptionsRoutes"></a>
+
++ Default: `false`
+
+Automatically creates a sibling `OPTIONS` route for each path that has at
+least one non-`OPTIONS` route defined. The generated route replies with a
+`204 No Content` status code and an `Allow` header listing every method
+supported by the path (including `OPTIONS` itself, and `HEAD` when it is
+exposed by [`exposeHeadRoutes`](#exposeheadroutes)), sorted alphabetically
+and joined with `', '`.
+
+If you define your own `OPTIONS` handler for a path, it always takes
+precedence over the generated one, regardless of the registration order.
 
 ### `return503OnClosing`
 <a id="factory-return-503-on-closing"></a>

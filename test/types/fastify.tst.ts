@@ -120,6 +120,8 @@ expect(fastify({ http2: true })).type.toBeAssignableTo<
 >()
 expect(fastify({ ignoreTrailingSlash: true })).type.toBeAssignableTo<FastifyInstance>()
 expect(fastify({ ignoreDuplicateSlashes: true })).type.toBeAssignableTo<FastifyInstance>()
+expect(fastify({ exposeHeadRoutes: true })).type.toBeAssignableTo<FastifyInstance>()
+expect(fastify({ exposeOptionsRoutes: true })).type.toBeAssignableTo<FastifyInstance>()
 expect(fastify({ connectionTimeout: 1000 })).type.toBeAssignableTo<FastifyInstance>()
 expect(fastify({ forceCloseConnections: true })).type.toBeAssignableTo<FastifyInstance>()
 expect(fastify({ keepAliveTimeout: 1000 })).type.toBeAssignableTo<FastifyInstance>()

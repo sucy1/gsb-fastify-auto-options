@@ -49,6 +49,7 @@ test('without options passed to Fastify, initialConfig should expose default val
     requestIdLogLabel: 'reqId',
     http2SessionTimeout: 72000,
     exposeHeadRoutes: true,
+    exposeOptionsRoutes: false,
     useSemicolonDelimiter: false
   }
 
@@ -289,6 +290,7 @@ test('Should not have issues when passing stream options to Pino.js', (t, done) 
       requestIdLogLabel: 'reqId',
       http2SessionTimeout: 72000,
       exposeHeadRoutes: true,
+      exposeOptionsRoutes: false,
       useSemicolonDelimiter: false
     })
   } catch (error) {
